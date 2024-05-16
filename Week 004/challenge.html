@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Challenge</title>
+</head>
+<script>
+    var numberInput = prompt("Enter a number");
+    var count = 0;
+    if (numberInput ==1)
+    {
+        window.alert("1 is neither a prime number nor composite number.");
+    }
+    else{
+        for (var i=1; i<=numberInput; i++)
+        {
+            if (numberInput%i==0)
+            {
+                count = count + 1;
+            }
+        }
+
+        if (count == 2)
+        {
+            window.alert(numberInput + " is a prime number")
+        }
+        else
+        {
+        window.alert(numberInput + " is a composite number")
+        }
+    }
+
+</script>
+<body>
+</body>
+</html>

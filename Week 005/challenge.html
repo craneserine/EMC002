@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Pattern</title>
+</head>
+<body>
+    <!-- input number from user -->
+    <input type="number" id="diamond" name="diamond" placeholder="Enter a number"><br><br>
+
+    <!-- trigger diamond generation -->
+    <button onclick="generateDiamond()">Generate Diamond</button>
+    
+    <!-- display diamond pattern -->
+    <div id="diamond-pattern"></div> 
+
+    <script>
+        function generateDiamond() { //reads user input and converts it to integer
+            var n = parseInt(document.getElementById('diamond').value);
+            if (isNaN(n) || n <= 0) { // isNaN() [not-a-number] is a function property of the global object
+                alert("Please enter a valid positive number.");
+                return;
+            }
+
+            var space = n - 1; // space needed to print *
+            var pattern = ''; // space ??
+
+            // Upper half of the diamond, constructed with nested loops
+            for (var i = 0; i < n; i++) {
+                for (var j = 0; j < space; j++) {
+                    pattern += '&nbsp;'; // nbsp stands for non-breaking space; strings are put into separate lines
+                }
+                for (var j = 0; j <= i; j++) {
+                    pattern += '* ';
+                }
+                pattern += '<br>';
+                space--;
+            }
+
+            // Lower half of the diamond, resets space to zero before constructing in nested loops
+            space = 0;
+            for (var i = n; i > 0; i--) {
+                for (var j = 0; j < space; j++) {
+                    pattern += '&nbsp;';
+                }
+                for (var j = 0; j < i; j++) {
+                    pattern += '* ';
+                }
+                pattern += '<br>';
+                space++;
+            }
+
+            // Display the pattern
+            document.getElementById('diamond-pattern').innerHTML = pattern;
+        }
+    </script>
+</body>
+</html>

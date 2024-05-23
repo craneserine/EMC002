@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"></meta>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
+  <title>BMI Calculator</title>
+</head>
+<body>
+
+    <!-- Identify if the user input is odd or even -->
+<h1>Odd or Even</h1>
+<script>
+    function findOddEven(){
+    var num = document.getElementById('num').value;
+    if ( num % 2 == 0) {
+    document.getElementById('result').innerHTML = num + ' is an Even number';
+    }else{
+    document.getElementById('result').innerHTML = num + ' is an Odd number';
+    }
+    } 
+    </script>
+
+<h1>JavaScript to find Odd or Even number!</h1>
+<form method="post">
+Enter a number: <input type="number" id="num" name="num" min="0" />
+<input type="button" value="Find Odd or Even" onclick="findOddEven()" name="find" />
+<div style="margin-top: 10px;" id="result"></div>
+</form>
+
+<!-- Create a function that calculates BMI. Identify underweight, normal, or obese. -->
+<h1>BMI Calculator</h1>
+    <form id="bmiForm">
+        <label for="weight">Weight (kg): </label>
+        <input type="number" id="weight" name="weight" step="0.1" required><br><br>
+
+        <label for="height">Height (m): </label>
+        <input type="number" id="height" name="height" step="0.01" required><br><br>
+
+        <button type="button" onclick="calculateBMI()">Calculate BMI</button>
+    </form>
+
+    <p id="bmiResult"></p>
+
+    <script>
+        function calculateBMI() {
+            // Get the input values
+            var weight = document.getElementById('weight').value;
+            var height = document.getElementById('height').value;
+
+            // Check if the inputs are empty
+            if (weight === '' || height === '') {
+                alert('Please fill in both fields');
+                return;
+            }
+            
+            // Convert input values to numbers
+            weight = parseFloat(weight);
+            height = parseFloat(height);
+
+            // Calculate BMI
+            var bmi = weight / (height**2);
+            bmi = bmi.toFixed(2); // Round to 2 decimal places
+
+            // Determine weight category
+            let category = "";
+            if (bmi < 18.5) {
+                category = 'Underweight';
+            } else if (bmi >= 18.5 && bmi <= 24.9) {
+                category = 'Normal weight';
+            } else if (bmi >= 25 && bmi <= 29.9) {
+                category = 'Overweight';
+            } else {
+                category = 'Obesity';
+            }
+  
+            // Display the result
+            document.getElementById('bmiResult').innerHTML = category;
+        }
+</script>
+<!-- Add a textbox and a button. Once the button is clicked, display a warning (window alert) if the text is empty then if not display the value inputted by the user. -->
+<script>
+  function validateForm() {
+      var uname=document.getElementById("uname").value;
+      if (uname==""){
+          alert("Username is obligatory");
+          return false;
+      }
+  }
+</script>
+<form onSubmit="return validateForm()">
+  <input type="text" placeholder="Username" id="uname">
+  <input type="submit" id="check" value="OK">
+</form>
+
+
+</body>
+</html>

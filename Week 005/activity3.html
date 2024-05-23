@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 3</title>
+</head>
+<body>
+<!-- change content -->
+<p id="one">Changing Text.</p>
+<button type="button" onclick='document.getElementById("one").innerHTML = "Text Changed!"'>Click Me!</button>
+<br>
+
+<!-- Change font style -->
+<p id="two">Font Style Change.</p>
+<button type="button" onclick='document.getElementById("two").style.fontStyle="italic"'>Click Me!</button>
+<br>
+<br>
+
+<!-- Change image -->
+<p>Change the image shown.</p>
+<img id="three" src="..\Images\treecko.png" width="100px">
+<button type="button" onclick='document.getElementById("three").src = "../Images/jigglypuff.png"'>Click Me!</button>
+<br>
+
+<!-- Hide Element -->
+<p id="four">Hide me!</p>
+<button type="button" onclick="document.getElementById('four').style.display='none'">Click Me!</button>
+<br>
+<br>
+
+<!-- Show Element -->
+<p id="five" style="display:none;">Boo!</p>
+<button type="button" onclick="document.getElementById('five').style.display='block'">Click Me!</button>
+<br>
+
+<!-- Display "Hello World" in the console. -->
+<p>Press F12 for the console.</p>
+<script>
+    console.log("Hello World!");
+</script>
+
+<!-- Display "Welcome to CIIT" in an alert box -->
+<script>
+    window.alert("Welcome to CIIT!");
+</script>
+
+<!-- x = 5
+y = 3
+Compute x^y and display it on the html page. -->
+<p>Show the answer to the equation.</p>
+<p id="eight"></p>
+<script>
+// create variables:
+var x;
+let y;
+
+// use variables:
+x = 5; y = 3;
+let z = x**y;
+</script>
+
+<!-- solve: -->
+<button type="button" onclick='document.getElementById("eight").innerHTML = z'>Click Me!</button>
+
+</body>
+</html>

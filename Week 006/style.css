@@ -1,158 +1,265 @@
-*{
-  margin: 0;
+/* Reset default padding, margin, and box-sizing behavior for all elements */
+* {
   padding: 0;
-  font-family: sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
 
+/* Define styles for the logo */
+.logo {
+  font-family: "Danfo", serif;
+  font-size: 35px;
+  color: white;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "ELSH" 0;
 }
-.banner{
+
+/* Styles for the header element */
+header {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
   width: 100%;
-  height: 100vh;
-  background-image: url(BACKGROUND.png);
-  background-size: cover;
-  background-position: center;
-}
-.navbar{
-  width: 85%;
-  margin: auto;
-  padding: 35px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.logo{
-  width: 120px;
-  cursor: pointer;
-}
-.navbar ul li{
-  list-style: none;
-  display: inline-block;
-  margin: 0 20px;
-  position: relative;
-}
-.navbar ul li a{
-  text-decoration: none;
-  color: #433934;
-  text-transform: uppercase;
-}
-.navbar ul li::after{
-  content: '';
-  height: 3px;
-  width: 0%;
-  background: #64604a;
-  position: absolute;
-  left: 0;
-  bottom: -10;
-  transition: 0.5s;
-}
-.navbar ul li:hover::after{
-width: 100%;   
-}
-.content{
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
-  color: rgb(41, 39, 29);
-}
-.content h1{
-  font-size: 70px;
-  margin-top: 80px;
-}
-.content p{
-  margin: 20px auto;
-  font-weight: 100;
-  line-height: 25px;
-}
-button {
-  width: 200px;
-  padding: 15px 0;
-  text-align: center;
-  margin: 20px 10px;
-  border-radius: 25px;
-  font-weight: bold;
-  border: 2px solid rgb(72, 50, 24);
+  padding: 33px 9%;
   background: transparent;
-  color: rgb(72, 50, 24);
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
 }
-span{
-  background: #736b5f;
-  height: 100%;
-  width: 0%;
-  border-radius: 25px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-  transition: 0.5s;
+
+/* Styles for the body */
+body {
+  margin: 0;
+  padding-right: 0;
+  background-color: #877f6b;
+  background-image: url("../Images/background.png");
+  background-position: right;
+  background-size: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
 }
-button:hover span{
-  width: 100%;
-}
-button:hover{
-  border: none;
-}
-table{
-  width: 550px;
-  font-size: 18px;
-  margin: 20px auto;
-  font-weight: 100;
-  line-height: 25px;
-  text-align: center;
-  color: #2e2a1e;
-}
-th{
-  font-size: 23px;
-  color: #322f23;
-}
-table, th, td {
-  border: 2px solid #574e34;
-  border-collapse: collapse;
-}
-th, td {
-  border: 2px solid #574e34;
-  border-collapse: collapse;
-  padding: 2px;
-}
-tr:nth-child(even) {
-  background-color: rgb(203, 190, 173);
-}
-tr:nth-child(odd) {
-  background-color: rgb(228, 220, 199);
-}
-.gallery {
+
+/* Styles for the navigation list */
+.navlist {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  background-color: #a19787;
+}
+
+/* Styles for links within the navigation list */
+.navlist a {
+  color: white;
+  margin-left: 60px;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all .55s ease;
+}
+
+/* Styles for links within the navigation list on hover */
+.navlist a:hover {
+  border-bottom: 2px solid white;
+}
+
+/* Styles for the menu icon */
+#menu-icon {
+  color: white;
+  font-size: 30px;
+  z-index: 10001;
+  cursor: pointer;
+  display: none;
+}
+
+/* Styles for the info section */
+.info {
   height: 100%;
-  padding: 0px 200px;
-}
-.gallery .picture {
-  margin: 25pxpx ;
-}
-.gallery .picture img {
-  width: 350px;
-  height: 350px;
-  box-shadow: 0px 0px 32px -1 rgba(0, 0, 0, 0.9);
-}
-.text {
   width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Styles for sections within the info section */
+section {
+  padding: 0 19%;
+}
+
+/* Styles for text within the info section */
+.info-text h5 {
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+}
+
+.info-text h1 {
+  font-family: "Poetsen One", sans-serif;
+  font-size: 90px;
+  line-height: 1;
+  color: white;
+  margin: 0 0 20px;
+}
+
+.info-text h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  /* margin-bottom: 10px; */
+}
+
+.info-text p {
+  color: white;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 40px;
+}
+
+/* Styles for icons */
+.icons {
+  position: absolute;
   top: 50%;
+  padding: 0 9%;
   transform: translateY(-50%);
-  text-align: center;
-  color: rgb(41, 39, 29); 
 }
-.text h1{
-  font-size: 70px;
-  margin-top: 80px;
+
+.icons i {
+  display: block;
+  margin: 26px 0;
+  font-size: 24px;
+  color: white;
+  transition: all .50s ease;
 }
-.text p{
-  margin: 20px auto;
-  font-weight: 100;
-  line-height: 25px;
+
+.icons i:hover {
+  color: gray;
+  transform: translateY(-5px);
+}
+
+/* Styles for scroll-down button */
+.scroll-down {
+  position: absolute;
+  bottom: 6%;
+  right: 9%;
+}
+
+.scroll-down i {
+  display: block;
+  padding: 12px;
+  font-size: 25px;
+  color: white;
+  background: rgba(82, 83, 51, 0.259);
+  border-radius: 30px;
+  transition: all .50s ease;
+}
+
+.scroll-down i:hover {
+  transform: translateY(-5px);
+}
+
+/* Media query for screens up to 1535px width */
+@media (max-width: 1535px) {
+  header {
+    padding: 15px 3%;
+    transition: .2s;
+  }
+  .scroll-down {
+    right: 3%;
+    transition: .2s;
+  }
+}
+
+/* Media query for screens up to 1460px width */
+@media (max-width: 1460px) {
+  section {
+    padding: 0 12%;
+    transition: .2s;
+  }
+}
+
+/* Media query for screens up to 1340px width */
+@media (max-width: 1340px) {
+  .info-text h1 {
+    font-size: 75px;
+    margin: 0 0 30px;
+  }
+  .info-text h5 {
+    margin-bottom: 25px;
+  }
+}
+
+/* Media query for screens up to 1195px width */
+@media (max-width: 1195px) {
+  section {
+    padding: 0 3%;
+    transition: .2s;
+  }
+  .info-text {
+    padding-top: 115px;
+  }
+  .info {
+    height: 100%;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+  .icons {
+    display: none;
+  }
+  .scroll-down {
+    display: none;
+  }
+}
+
+/* Media query for screens up to 990px width */
+@media (max-width: 990px) {
+  #menu-icon {
+    display: block;
+  }
+  .navlist {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 300px;
+    height: 40vh;
+    background: rgba(82, 83, 51, 0.259);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 20px;
+    transition: all .55s ease;
+  }
+  .navlist a {
+    margin-left: 0;
+    display: block;
+    margin: 7px 0;
+  }
+  .navlist.open {
+    right: 0;
+  }
+}
+
+/* Media query for screens up to 680px width */
+@media (max-width: 680px) {
+  /* Define styles for this screen width if needed */
+}
+
+.dot {
+   /* Define width of the dot */
+   width: 2px;
+   /* Define height of the dot */
+   height: 2px;
+   /* Set background color of the dot */
+   background: burlywood;
+   /* Set the position property to absolute to position the dot relative to its containing element */
+   position: absolute;
+   /* Apply border-radius to make the dot circular */
+   border-radius: 50%;
+   /* Disable pointer events on the dot so it does not interfere with mouse interactions */
+   pointer-events: none;
+   /* Position the dot at its center */
+   transform: translate(-50%, -50%);
 }

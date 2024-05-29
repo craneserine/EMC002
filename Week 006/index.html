@@ -1,29 +1,69 @@
-<html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Janna Mari ELemen's Art Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bird House</title>
+    <link rel="icon" type="image/x-icon" href="..\Images\paper crane.png">
+
+     <!-- My CSS Stylesheet -->
+     <link rel="stylesheet" href="style.css">
+    
+     <!-- Links an external CSS stylesheet providing box icons -->
+     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+ 
+     <!-- Links an external CSS stylesheet providing Remix icons -->
+     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+ 
+     <!-- Establishes preconnect hints for faster loading of Google Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <!-- Links an external stylesheet importing multiple Google Fonts -->
+     <link href="https://fonts.googleapis.com/css2?family=Danfo&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poetsen+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+
+</head>
+
 <body>
-    <div class="banner">
-        <div class="navbar">
-            <img src="..\Images\paper crane.png" class="logo">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="">Portfolio</a></li>
-                <li><a href="">Commission Prices</a></li>
-                <li><a href="">Contact Me</a></li>
-            </ul>
+
+    <header>
+        <a href="#" class="logo">THE BIRD HOUSE</a> <!-- Defines a link with the class "logo" -->
+        
+        <ul class="navlist"> <!-- the tab where you can pick windows -->
+            <li><a href="#">Home</a></li> <!-- Defines a list item with a link to the Home page -->
+            <li><a href="#">About</a></li> <!-- Defines a list item with a link to the About page -->
+            <li><a href="#">Portfolio</a></li> <!-- Defines a list item with a link to the Portfolio page -->
+            <li><a href="#">Pricelist</a></li> <!-- Defines a list item with a link to the Pricelist page -->
+            <li><a href="#">Contact</a></li> <!-- Defines a list item with a link to the Contact page -->
+        </ul>
+
+        <div class="bx bx-menu" id="menu-icon"></div> <!-- Defines a div with classes "bx bx-menu" and id "menu-icon" -->
+    </header>
+
+    <section class="info"> <!-- Represents a section with the class "info" -->
+        <div class="info-text"> <!-- Defines a div with the class "info-text" -->
+            <h5>Game Developer - Character Designer</h5> <!-- Defines a level 5 heading -->
+            <h4>Digital Artist - Something Something</h4> <!-- Defines a level 4 heading -->
+            <h1>CRANES</h1> <!-- Defines a level 1 heading -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p> <!-- Defines a paragraph with placeholder text -->
         </div>
-        <div class="content">
-            <h1>Bird Cage</h1>
-            <p>
-                The Birdhouse is an online store showcasing the artistic works of Cranes, an aspiring digital artist. <br> Specializing in horror and fanart, the store features a curated selection of her original pieces alongside fanart. The store is also open to taking commissions.
-            </p>
-         </div>
+    </section>
+
+    <div class="icons"> <!-- Defines a div with the class "icons" -->
+        <a href="https://www.instagram.com/minimaristic/" target="_blank"><i class="ri-instagram-line"></i></a> <!-- Defines a link with an Instagram icon -->
+        <a href="https://x.com/craniacarrest" target="_blank"><i class="ri-twitter-x-fill"></i></a> <!-- Defines a link with a Twitter icon -->
+        <a href="#"><i class="ri-discord-fill"></i></a> <!-- Defines a link with a Discord icon -->
     </div>
+
+    <div class="scroll-down"> <!-- Defines a div with the class "scroll-down" -->
+        <a href="#"><i class="ri-arrow-down-line"></i></a> <!-- Defines a link with an arrow down icon -->
+    </div>
+
+    <!-- scroll reveal effect -->
+    <script src="https://unpkg.com/scrollreveal"></script> <!-- Includes the ScrollReveal library -->
+
+    <!-- custom js link -->
+    <script src="script.js"></script> <!-- Links to a custom JavaScript file -->
 
 </body>
 </html>

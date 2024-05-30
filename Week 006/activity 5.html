@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Activity 5</title>
+<style>
+    .valid {
+        color: green;
+    }
+    .invalid {
+        color: red;
+    }
+</style>
+</head>
+<body>
+
+<form id="loginForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+    <span id="usernameIndicator"></span><br><br>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <span id="passwordIndicator"></span><br><br>
+    
+    <input type="submit" value="Login">
+</form>
+
+<script>
+document.getElementById('username').addEventListener('input', function() {
+    var username = this.value;
+    var usernameIndicator = document.getElementById('usernameIndicator');
+    if (username.length < 6) {
+        usernameIndicator.textContent = 'Username must be at least 6 characters long.';
+        usernameIndicator.className = 'invalid';
+    } else if (!/^\w+$/.test(username)) {
+        usernameIndicator.textContent = 'Username can only contain letters, numbers, and underscores.';
+        usernameIndicator.className = 'invalid';
+    } else {
+        usernameIndicator.textContent = 'Username is valid.';
+        usernameIndicator.className = 'valid';
+    }
+});
+
+document.getElementById('password').addEventListener('input', function() {
+    var password = this.value;
+    var passwordIndicator = document.getElementById('passwordIndicator');
+    if (password.length < 8) {
+        passwordIndicator.textContent = 'Password must be at least 8 characters long.';
+        passwordIndicator.className = 'invalid';
+    } else if (!/[a-z]/.test(password) || !/[A-Z]/.test(password)) {
+        passwordIndicator.textContent = 'Password must contain both upper and lower case letters.';
+        passwordIndicator.className = 'invalid';
+    } else if (!/\d/.test(password)) {
+        passwordIndicator.textContent = 'Password must contain at least one digit.';
+        passwordIndicator.className = 'invalid';
+    } else if (!/^[a-zA-Z0-9_]+$/.test(password)) {
+        passwordIndicator.textContent = 'Password can only contain letters, numbers, and underscores.';
+        passwordIndicator.className = 'invalid';
+    } else {
+        passwordIndicator.textContent = 'Password is valid.';
+        passwordIndicator.className = 'valid';
+    }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Bird House</title>
+        <link rel="icon" type="image/x-icon" href="..\Images\paper crane.png">
+    
+         <!-- My CSS Stylesheet -->
+         <link rel="stylesheet" href="midterms.css">
+        
+         <!-- Links an external CSS stylesheet providing box icons -->
+         <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+     
+         <!-- Links an external CSS stylesheet providing Remix icons -->
+         <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+     
+         <!-- Establishes preconnect hints for faster loading of Google Fonts -->
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <!-- Links an external stylesheet importing multiple Google Fonts -->
+         <link href="https://fonts.googleapis.com/css2?family=Danfo&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poetsen+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- ANIMATED BACKGROUND FOR HOME SCREEN; THIS WILL DIFFER IN DIFF PAGES -->
+    <style>
+        body {
+            margin: 0;
+            padding-right: 0;
+            background-image: url("../Images/background.png");
+            background-position: right;
+            background-size: 180vh 100vh;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+
+    <header>
+        <!-- Defines a link with the class "logo" -->
+        <a href="#" class="logo">THE BIRD HOUSE</a>
+        
+        <!-- the tab where you can pick windows -->
+        <nav class="navlist"> 
+            <li><a href="index.html">Home</a></li> <!-- Defines a list item with a link to the Home page -->
+            <li><a href="about.html">About</a></li> <!-- Defines a list item with a link to the About page -->
+            <li><a href="portfolio.html">Portfolio</a></li> <!-- Defines a list item with a link to the Portfolio page -->
+            <li><a href="pricelist.html">Pricelist</a></li> <!-- Defines a list item with a link to the Pricelist page -->
+            <li><a href="contact.html">Contact</a></li> <!-- Defines a list item with a link to the Contact page -->
+            <button class="btnLogin-popup">Login</button> <!-- LOG IN BLAH BLAH -->
+        </nav>
+        <div class="bx bx-menu" id="menu-icon"></div> <!-- Defines a div with classes "bx bx-menu" and id "menu-icon" -->
+    </header>
+
+    <!-- TEXT ON HOME PAGE -->
+    <section class="info">
+        <div class="info-text"> <!-- Defines a div with the class "info-text" -->
+            <h5>Game Developer - Character Designer</h5> <!-- Defines a level 5 heading -->
+            <h4>Digital Artist - Something Something</h4> <!-- Defines a level 4 heading -->
+            <h1>CRANES</h1> <!-- Defines a level 1 heading -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p> <!-- Defines a paragraph with placeholder text -->
+        </div>
+    </section>
+
+    <div class="icons"> 
+        <a href="https://www.instagram.com/minimaristic/" target="_blank"><i class="ri-instagram-line"></i></a>
+        <a href="https://x.com/craniacarrest" target="_blank"><i class="ri-twitter-x-fill"></i></a>
+    </div> 
+
+    <div class="scroll-down"> <!-- Defines a div with the class "scroll-down" -->
+        <a href="#"><i class="ri-arrow-down-line"></i></a> <!-- Defines a link with an arrow down icon -->
+    </div>
+
+    <!-- scroll reveal effect -->
+    <script src="https://unpkg.com/scrollreveal"></script> <!-- Includes the ScrollReveal library -->
+
+
+    <!-- LOG IN CODE -->
+    <div class="wrapper">
+    <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+        <div class="form-box login">
+            <h2>Log-In</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                    <button type="submit" class="btn">Submit</button>
+                    <div class="login-register">
+                        <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <h2>Register</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">I agree to the terms & conditions</label>
+                    <button type="submit" class="btn">Submit</button>
+                    <div class="login-register">
+                        <p>Already have an account? <a href="#" class="login-link">Log-In</a></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+            <!-- custom js link -->
+            <script src="midterms.js"></script> <!-- Links to a custom JavaScript file -->
+
+            <!-- icons -->
+            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

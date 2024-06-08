@@ -38,6 +38,7 @@ body {
   margin: 0;
   padding-right: 0;
   background-color: #877f6b;
+  overflow: hidden;
 }
 
 
@@ -468,4 +469,3 @@ section {
 .login-register {
   display: block;
 }
-

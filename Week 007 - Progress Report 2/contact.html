@@ -9,7 +9,8 @@
     
          <!-- My CSS Stylesheet -->
          <link rel="stylesheet" href="midterms.css">
-         <link rel="stylesheet" href="pricelist.css">
+         <link rel="stylesheet" href="contact.css">
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
          <script src="pricelist.js" defer></script> <!-- Links to a custom JavaScript file -->
          
          <!-- Google Fonts Link For Icons -->
@@ -42,3 +43,28 @@
 
         <div class="bx bx-menu" id="menu-icon"></div> <!-- Defines a div with classes "bx bx-menu" and id "menu-icon" -->
     </header>
+<br><br><br><br>
+    <div class="container">
+        <form action="action_page.php">
+      
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="philippines">Philippines</option>
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+      
+          <label for="subject">Commission Instructions</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          <input type="submit" value="Submit">
+      
+        </form>
+      </div>
+    </body>

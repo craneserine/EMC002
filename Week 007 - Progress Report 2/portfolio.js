@@ -1,108 +1,68 @@
-let openShopping = document.querySelector('.shopping');
-let closeShopping = document.querySelector('.closeShopping');
-let list = document.querySelector('.list');
-let listCard = document.querySelector('.listCard');
-let body = document.querySelector('body');
-let total = document.querySelector('.total');
-let quantity = document.querySelector('.quantity');
+const initSlider = () => {
+    const imageList = document.querySelector(".slider-wrapper .image-list");
+    const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
+    const sliderScrollbar = document.querySelector(".container .slider-scrollbar");
+    const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
+    const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+    
+    // Handle scrollbar thumb drag
+    scrollbarThumb.addEventListener("mousedown", (e) => {
+        const startX = e.clientX;
+        const thumbPosition = scrollbarThumb.offsetLeft;
+        const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
+        
+        // Update thumb position on mouse move
+        const handleMouseMove = (e) => {
+            const deltaX = e.clientX - startX;
+            const newThumbPosition = thumbPosition + deltaX;
 
-openShopping.addEventListener('click', ()=>{
-    body.classList.add('active');
-})
-closeShopping.addEventListener('click', ()=>{
-    body.classList.remove('active');
-})
-
-let products = [
-    {
-        id: 1,
-        name: 'PRODUCT NAME 1',
-        image: '1.PNG',
-        price: 120000
-    },
-    {
-        id: 2,
-        name: 'PRODUCT NAME 2',
-        image: '2.PNG',
-        price: 120000
-    },
-    {
-        id: 3,
-        name: 'PRODUCT NAME 3',
-        image: '3.PNG',
-        price: 220000
-    },
-    {
-        id: 4,
-        name: 'PRODUCT NAME 4',
-        image: '4.PNG',
-        price: 123000
-    },
-    {
-        id: 5,
-        name: 'PRODUCT NAME 5',
-        image: '5.PNG',
-        price: 320000
-    },
-    {
-        id: 6,
-        name: 'PRODUCT NAME 6',
-        image: '6.PNG',
-        price: 120000
-    }
-];
-let listCards  = [];
-function initApp(){
-    products.forEach((value, key) =>{
-        let newDiv = document.createElement('div');
-        newDiv.classList.add('item');
-        newDiv.innerHTML = `
-            <img src="image/${value.image}">
-            <div class="title">${value.name}</div>
-            <div class="price">${value.price.toLocaleString()}</div>
-            <button onclick="addToCard(${key})">Add To Card</button>`;
-        list.appendChild(newDiv);
-    })
-}
-initApp();
-function addToCard(key){
-    if(listCards[key] == null){
-        // copy product form list to list card
-        listCards[key] = JSON.parse(JSON.stringify(products[key]));
-        listCards[key].quantity = 1;
-    }
-    reloadCard();
-}
-function reloadCard(){
-    listCard.innerHTML = '';
-    let count = 0;
-    let totalPrice = 0;
-    listCards.forEach((value, key)=>{
-        totalPrice = totalPrice + value.price;
-        count = count + value.quantity;
-        if(value != null){
-            let newDiv = document.createElement('li');
-            newDiv.innerHTML = `
-                <div><img src="image/${value.image}"/></div>
-                <div>${value.name}</div>
-                <div>${value.price.toLocaleString()}</div>
-                <div>
-                    <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
-                    <div class="count">${value.quantity}</div>
-                    <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
-                </div>`;
-                listCard.appendChild(newDiv);
+            // Ensure the scrollbar thumb stays within bounds
+            const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+            const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+            
+            scrollbarThumb.style.left = `${boundedPosition}px`;
+            imageList.scrollLeft = scrollPosition;
         }
-    })
-    total.innerText = totalPrice.toLocaleString();
-    quantity.innerText = count;
-}
-function changeQuantity(key, quantity){
-    if(quantity == 0){
-        delete listCards[key];
-    }else{
-        listCards[key].quantity = quantity;
-        listCards[key].price = quantity * products[key].price;
+
+        // Remove event listeners on mouse up
+        const handleMouseUp = () => {
+            document.removeEventListener("mousemove", handleMouseMove);
+            document.removeEventListener("mouseup", handleMouseUp);
+        }
+
+        // Add event listeners for drag interaction
+        document.addEventListener("mousemove", handleMouseMove);
+        document.addEventListener("mouseup", handleMouseUp);
+    });
+
+    // Slide images according to the slide button clicks
+    slideButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const direction = button.id === "prev-slide" ? -1 : 1;
+            const scrollAmount = imageList.clientWidth * direction;
+            imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        });
+    });
+
+     // Show or hide slide buttons based on scroll position
+    const handleSlideButtons = () => {
+        slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
+        slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
     }
-    reloadCard();
+
+    // Update scrollbar thumb position based on image scroll
+    const updateScrollThumbPosition = () => {
+        const scrollPosition = imageList.scrollLeft;
+        const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+        scrollbarThumb.style.left = `${thumbPosition}px`;
+    }
+
+    // Call these two functions when image list scrolls
+    imageList.addEventListener("scroll", () => {
+        updateScrollThumbPosition();
+        handleSlideButtons();
+    });
 }
+
+window.addEventListener("resize", initSlider);
+window.addEventListener("load", initSlider);

@@ -180,7 +180,7 @@ p {
 	height: 100%;
 	width: 100%;
 	left: 0;
-	background-color: #e7dcd1;
+	background-color: #9d8a76;
 	transition: 0.3s ease;
 	transition-property: top, bottom;
 }
@@ -347,6 +347,35 @@ p {
     overflow: hidden; /* add this to clear the float */
   }
 
+  /* Add to Cart Button */
+.add-to-cart {
+    background-color: #918073;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+
+  }
+  
+  .add-to-cart:hover {
+    background-color: #7a6758;
+  }
+  
+  .add-to-cart:active {
+    background-color: #6a5c53;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .add-to-cart:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #918073;
+  }
+
 /* End Services Section */
 
 /* Projects section */
@@ -470,50 +499,7 @@ p {
 }
 /* End About Section */
 
-/* contact Section */
-#contact .contact {
-	flex-direction: column;
-	max-width: 1200px;
-	margin: 0 auto;
-	width: 90%;
-}
-#contact .contact-items {
-	/* max-width: 400px; */
-	width: 100%;
-}
-#contact .contact-item {
-	width: 80%;
-	padding: 20px;
-	text-align: center;
-	border-radius: 10px;
-	padding: 30px;
-	margin: 30px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	box-shadow: 0px 0px 18px 0 #554333;
-	transition: 0.3s ease box-shadow;
-}
-#contact .contact-item:hover {
-	box-shadow: 0px 0px 5px 0 #554333;
-}
-#contact .icon {
-	width: 70px;
-	margin: 0 auto;
-	margin-bottom: 10px;
-}
-#contact .contact-info h1 {
-	font-size: 2.5rem;
-	font-weight: 500;
-	margin-bottom: 5px;
-}
-#contact .contact-info h2 {
-	font-size: 1.3rem;
-	line-height: 2rem;
-	font-weight: 500;
-}
-/*End contact Section */
+
 
 /* Footer */
 #footer {
@@ -635,40 +621,6 @@ p {
 		text-align: left;
 	}
 	/* End About */
-
-	/* contact  */
-	#contact .contact {
-		flex-direction: column;
-		padding: 100px 0;
-		align-items: center;
-		justify-content: center;
-		min-width: 20vh;
-	}
-	#contact .contact-items {
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-evenly;
-		margin: 0;
-	}
-	#contact .contact-item {
-		width: 30%;
-		margin: 0;
-		flex-direction: row;
-	}
-	#contact .contact-item .icon {
-		height: 100px;
-		width: 100px;
-	}
-	#contact .contact-item .icon img {
-		object-fit: contain;
-	}
-	#contact .contact-item .contact-info {
-		width: 100%;
-		text-align: left;
-		padding-left: 20px;
-	}
-	/* End contact  */
 }
 /* End Media Query For Tablet */
 
@@ -702,56 +654,3 @@ p {
 	}
 }
 /* End  Media Query For Desktop */
-
-/* Log In Design */
-.login-form {
-    max-width: 300px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-image: url('../Images/background.png'); /* replace with your background image */
-    background-size: cover;
-    background-position: center;
-
-  }
-  
-  .login-form h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .login-form label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  .login-form input[type="text"], .login-form input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-  }
-  
-  .login-form button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #918073;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .login-form button[type="submit"]:hover {
-    background-color: #918073;
-  }
-
-  body {
-    background-color: #d6bc9b;
-  }
-  
-  #index {
-    background-color: #fff; /* or whatever background color you want for the first page */
-  }

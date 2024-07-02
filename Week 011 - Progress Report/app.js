@@ -23,3 +23,28 @@ menu_item.forEach((item) => {
 		mobile_menu.classList.toggle('active');
 	});
 });
+
+// cart
+
+// Calculate cart total
+const cartTotal = document.getElementById('cart-total');
+const calculateCartTotal = () => {
+  let total = 0;
+  cart.forEach((item) => {
+    total += 1; // Replace this with the actual price calculation
+  });
+  cartTotal.textContent = total;
+};
+
+// Add a click event listener to the confirm checkout button
+document.querySelector('#confirm-checkout').addEventListener('click', () => {
+  // Clear the cart
+  cart = [];
+  localStorage.removeItem('cart');
+
+  // Redirect to the "index.html" page
+  window.location.href = 'index.html';
+});
+
+// Update cart total
+calculateCartTotal();

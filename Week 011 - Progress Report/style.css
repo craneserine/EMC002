@@ -25,7 +25,7 @@ img {
 	object-fit: cover;
 }
 p {
-	color: black;
+	color: #0d100f;
 	font-size: 1.4rem;
 	margin-top: 5px;
 	line-height: 2.5rem;
@@ -35,22 +35,22 @@ p {
 .section-title {
 	font-size: 4rem;
 	font-weight: 300;
-	color: black;
+	color: #0d100f;
 	margin-bottom: 10px;
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
 	text-align: center;
 }
 .section-title span {
-	color: crimson;
+	color: #dd5817;
 }
 
 .cta {
 	display: inline-block;
 	padding: 10px 30px;
-	color: white;
+	color: #dd5817;
 	background-color: transparent;
-	border: 2px solid crimson;
+	border: 2px solid #dd5817;
 	font-size: 2rem;
 	text-transform: uppercase;
 	letter-spacing: 0.1rem;
@@ -59,16 +59,16 @@ p {
 	transition-property: background-color, color;
 }
 .cta:hover {
-	color: white;
-	background-color: crimson;
+	color: #e7dcd1;
+	background-color: #dd5817;
 }
 .brand h1 {
 	font-size: 3rem;
 	text-transform: uppercase;
-	color: white;
+	color: #e7dcd1;
 }
 .brand h1 span {
-	color: crimson;
+	color: #dd5817;
 }
 
 /* Header section */
@@ -82,7 +82,7 @@ p {
 }
 #header .header {
 	min-height: 8vh;
-	background-color: rgba(31, 30, 30, 0.24);
+	background-color: #574e41;
 	transition: 0.3s ease background-color;
 }
 #header .nav-bar {
@@ -97,7 +97,7 @@ p {
 #header .nav-list ul {
 	list-style: none;
 	position: absolute;
-	background-color: rgb(31, 30, 30);
+	background-color: #918073;
 	width: 100vw;
 	height: 100vh;
 	left: 100%;
@@ -118,7 +118,7 @@ p {
 	font-weight: 500;
 	letter-spacing: 0.2rem;
 	text-decoration: none;
-	color: white;
+	color: #d7bf9d;
 	text-transform: uppercase;
 	padding: 20px;
 	display: block;
@@ -129,7 +129,7 @@ p {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%) scale(0);
-	color: rgba(240, 248, 255, 0.021);
+	color: #574e4190;
 	font-size: 13rem;
 	letter-spacing: 50px;
 	z-index: -1;
@@ -140,13 +140,13 @@ p {
 	letter-spacing: initial;
 }
 #header .nav-list ul li:hover a {
-	color: crimson;
+	color: #e05917;
 }
 #header .hamburger {
 	height: 60px;
 	width: 60px;
 	display: inline-block;
-	border: 3px solid white;
+	border: 3px solid #e7dcd1;
 	border-radius: 50%;
 	position: relative;
 	display: flex;
@@ -163,14 +163,14 @@ p {
 	height: 100%;
 	width: 100%;
 	border-radius: 50%;
-	border: 3px solid white;
+	border: 3px solid #e7dcd1;
 	animation: hamburger_puls 1s ease infinite;
 }
 #header .hamburger .bar {
 	height: 2px;
 	width: 30px;
 	position: relative;
-	background-color: white;
+	background-color: #e7dcd1;
 	z-index: -1;
 }
 #header .hamburger .bar::after,
@@ -180,7 +180,7 @@ p {
 	height: 100%;
 	width: 100%;
 	left: 0;
-	background-color: white;
+	background-color: #e7dcd1;
 	transition: 0.3s ease;
 	transition-property: top, bottom;
 }
@@ -248,7 +248,7 @@ p {
 	left: 0;
 	height: 100%;
 	width: 0;
-	background-color: rgb(183, 171, 39);
+	background-color: #265564;
 	animation: text_reveal_box 1s ease;
 	animation-delay: 0.5s;
 }
@@ -291,9 +291,9 @@ p {
 	flex-direction: column;
 	padding: 30px;
 	border-radius: 10px;
-	background-image: url(./img/img-1.png);
+	background-image: url(..\Images\img-1.jpg);
 	background-size: cover;
-	margin: 10px 5%;
+	margin: 10px 5%; 
 	position: relative;
 	z-index: 1;
 	overflow: hidden;
@@ -305,25 +305,48 @@ p {
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	background-image: linear-gradient(60deg, #0a2d37 0%, #2c5c6a 80%);
 	opacity: 0.9;
 	z-index: -1;
 }
-#services .service-bottom .icon {
-	height: 80px;
-	width: 80px;
-	margin-bottom: 20px;
-}
 #services .service-item h2 {
 	font-size: 2rem;
-	color: white;
+	color: #e7dcd1;
 	margin-bottom: 10px;
 	text-transform: uppercase;
 }
 #services .service-item p {
-	color: white;
+	color: #e7dcd1;
 	text-align: left;
 }
+
+.service-table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .inner-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .inner-table tr td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .inner-table tr td:first-child {
+    width: 30%;
+  }
+  
+  .inner-table tr td:last-child {
+    width: 70%;
+  }
+  
+  .service-bottom {
+    overflow: hidden; /* add this to clear the float */
+  }
+
 /* End Services Section */
 
 /* Projects section */
@@ -361,7 +384,7 @@ p {
 	justify-content: center;
 	flex-direction: column;
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	color: white;
+	color: #e7dcd1;
 }
 #projects .project-info h1 {
 	font-size: 4rem;
@@ -373,7 +396,7 @@ p {
 	margin-top: 10px;
 }
 #projects .project-info p {
-	color: white;
+	color: #e7dcd1;
 }
 #projects .project-img {
 	flex-basis: 50%;
@@ -388,7 +411,7 @@ p {
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	/* background-image: linear-gradient(60deg, #29323c 0%, #485563 100%); */
 	opacity: 0.7;
 }
 #projects .project-img img {
@@ -424,7 +447,7 @@ p {
 	margin-bottom: 20px;
 }
 #about .col-right .cta {
-	color: black;
+	/* color: #dd5817; */
 	margin-bottom: 50px;
 	padding: 10px 20px;
 	font-size: 2rem;
@@ -433,7 +456,7 @@ p {
 	height: 100%;
 	width: 100%;
 	position: relative;
-	border: 10px solid white;
+	border: 10px solid #e7dcd1;
 }
 #about .col-left .about-img::after {
 	content: '';
@@ -442,7 +465,7 @@ p {
 	top: 19px;
 	height: 98%;
 	width: 98%;
-	border: 7px solid crimson;
+	border: 7px solid #dd5817;
 	z-index: -1;
 }
 /* End About Section */
@@ -469,11 +492,11 @@ p {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	box-shadow: 0px 0px 18px 0 #0000002c;
+	box-shadow: 0px 0px 18px 0 #554333;
 	transition: 0.3s ease box-shadow;
 }
 #contact .contact-item:hover {
-	box-shadow: 0px 0px 5px 0 #0000002c;
+	box-shadow: 0px 0px 5px 0 #554333;
 }
 #contact .icon {
 	width: 70px;
@@ -494,41 +517,19 @@ p {
 
 /* Footer */
 #footer {
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	background-image: linear-gradient(60deg, #574e41 0%, #918073 100%);
 }
 #footer .footer {
-	min-height: 200px;
+	min-height: 50px;
 	flex-direction: column;
-	padding-top: 50px;
+	padding-top: 10px;
 	padding-bottom: 10px;
 }
-#footer h2 {
-	color: white;
-	font-weight: 500;
-	font-size: 1.8rem;
-	letter-spacing: 0.1rem;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-#footer .social-icon {
-	display: flex;
-	margin-bottom: 30px;
-}
-#footer .social-item {
-	height: 50px;
-	width: 50px;
-	margin: 0 5px;
-}
-#footer .social-item img {
-	filter: grayscale(1);
-	transition: 0.3s ease filter;
-}
-#footer .social-item:hover img {
-	filter: grayscale(0);
-}
+
 #footer p {
-	color: white;
+	color: #e7dcd1;
 	font-size: 1.3rem;
+    position: center;
 }
 /* End Footer */
 
@@ -555,12 +556,12 @@ p {
 }
 @keyframes text_reveal {
 	100% {
-		color: white;
+		color: #e7dcd1;
 	}
 }
 @keyframes text_reveal_name {
 	100% {
-		color: crimson;
+		color: #265664;
 		font-weight: 500;
 	}
 }
@@ -624,7 +625,7 @@ p {
 		top: 34px;
 		height: 98%;
 		width: 98%;
-		border: 10px solid crimson;
+		border: 10px solid #265564;
 	}
 	#about .col-right {
 		text-align: left;
@@ -710,6 +711,10 @@ p {
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: url('../Images/background.png'); /* replace with your background image */
+    background-size: cover;
+    background-position: center;
+
   }
   
   .login-form h1 {
@@ -732,7 +737,7 @@ p {
   .login-form button[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: #918073;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -740,5 +745,13 @@ p {
   }
   
   .login-form button[type="submit"]:hover {
-    background-color: #3e8e41;
+    background-color: #918073;
+  }
+
+  body {
+    background-color: #d6bc9b;
+  }
+  
+  #index {
+    background-color: #fff; /* or whatever background color you want for the first page */
   }

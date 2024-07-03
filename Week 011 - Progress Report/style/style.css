@@ -655,3 +655,7 @@ p {
 	}
 }
 /* End  Media Query For Desktop */
+
+body {
+	background-color: #e7dcd1;
+  }

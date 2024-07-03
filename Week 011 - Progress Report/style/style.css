@@ -79,6 +79,7 @@ p {
 	top: 0;
 	width: 100vw;
 	height: auto;
+	user-select: none
 }
 #header .header {
 	min-height: 8vh;
@@ -200,7 +201,7 @@ p {
 
 /* Hero Section */
 #hero {
-	background-image: url(../Images/background.jpg);
+	background-image: url(..\Images\background.png);
 	background-size: cover;
 	background-position: top center;
 	position: relative;
@@ -346,6 +347,13 @@ p {
   
   .service-bottom {
     overflow: hidden; /* add this to clear the float */
+  }
+
+  #services a.cta {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	max-width: 300px; /* adjust the width to your liking */
   }
 
   /* Add to Cart Button */

@@ -29,15 +29,15 @@
                 </form>
             </div>
             <div class="form signupform">
-                <form>
+                <form action="signupfunction.php" method="post">
                     <h3>Sign Up</h3>
-                    <input type="text" placeholder="Username" autocomplete="off" required>
-                    <input type="email" autocomplete="off" placeholder="Email Address" required>
-                    <input type="password" placeholder="Password" autocomplete="off" required>
-                    <input type="password" placeholder="Confirm Password" autocomplete="off" required>
-                    <input type="submit" value="Sign Up">
+                    <input type="text" name="usignup" placeholder="Username" autocomplete="off" required>
+                    <input type="email" name="email" autocomplete="off" placeholder="Email Address" required>
+                    <input type="password" name="upassword" placeholder="Password" autocomplete="off" required>
+                    <input type="password" name="confirmPassword" placeholder="Confirm Password" autocomplete="off" required>
+                    <input type="submit" name="signup" value="Sign Up">
                 </form>
-            </div>
+             </div>
         </div>
     </div>
 

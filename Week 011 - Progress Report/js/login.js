@@ -1,16 +1,20 @@
-const signinbtn = document.querySelector('.signinbtn')
-const signupbtn = document.querySelector('.signupbtn')
-// const formbox = document.querySelector('.form-box')
-// const body = document.querySelector('body')
+const signinbtn = document.querySelector('.signinbtn');
+const signupbtn = document.querySelector('.signupbtn');
+const formbox = document.querySelector('.form-box');
+const body = document.querySelector('body');
 
 signinbtn.onclick = function() {
-  formbox.classList.remove('active')
-  body.classList.remove('active')
+  formbox.classList.remove('active');
+  body.classList.remove('active');
+  document.querySelector('.signin').classList.add('active');
+  document.querySelector('.signup').classList.remove('active');
 }
 
 signupbtn.onclick = function() {
-  formbox.classList.add('active')
-  body.classList.add('active')
+  formbox.classList.add('active');
+  body.classList.add('active');
+  document.querySelector('.signin').classList.remove('active');
+  document.querySelector('.signup').classList.add('active');
 }
 
 // // Get the sign in button element

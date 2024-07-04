@@ -57,40 +57,46 @@ if(!isset($_SESSION["login"]))
   </section>
   <!-- End Hero Section  -->
 
-   <!-- Projects Section -->
-  <section id="services">
-    <div class="services container">
-      <div class="service-top">
-        <h1 class="section-title">COMM<span>I</span>SSIONS</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
-      </div>
-      <div class="service-bottom">
-        <div class="service-item">
-          <img src="..\Images\img-2.jpg" alt="Image 1" class="service-image">
-          <h2>Sketched Drawing Commissions</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="service-item">
-          <img src="..\Images\img-1.jpg" alt="Image 2" class="service-image">
-          <h2>Colored Drawing Commissions</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-
-                <div class="service-item">
-          <img src="..\Images\img-10.png  " alt="Image 2" class="service-image">
-          <h2>Rendered Drawing Commissions</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <!-- Add more service items here -->
-      </div>
+   <!-- Services Section -->
+<section id="services">
+  <div class="services container">
+    <div class="service-top">
+      <h1 class="section-title">COMM<span>I</span>SSIONS</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
     </div>
+    <div class="service-bottom">
+      <?php
+      // database connection code
+      $con = mysqli_connect('localhost', 'root', '', 'birdcage');
 
-    <a href="checkout.php" class="cta">Checkout</a>
-  </section>
-   <!-- End Projects Section -->
+      // database insert SQL code
+      $sql = "SELECT * FROM product";
+
+      $result = $con->query($sql);
+
+      if ($result->num_rows > 0) {
+        // output data of each row
+        while ($row = $result->fetch_assoc()) {
+          ?>
+          <div class="service-item">
+            <img src="..\Images\img-2.jpg" alt="Image 1" class="service-image">
+            <h2><?php echo $row["item_name"]; ?></h2>
+            <p><?php echo $row["description"]; ?></p>
+            <p>Price: <?php echo $row["price"]; ?></p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <?php
+        }
+      } else {
+        echo "0 results";
+      }
+      $con->close();
+      ?>
+    </div>
+  </div>
+  <a href="checkout.php" class="cta">Checkout</a>
+</section>
+<!-- End Services Section -->
 
   <!-- Projects Section -->
   <body class="other-pages">

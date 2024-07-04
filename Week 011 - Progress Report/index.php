@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php 
+session_start ();
+if(!isset($_SESSION["login"]))
+	header("location:login.php");
+
+
+?>
 
 <head>
   <meta charset="UTF-8">
@@ -28,7 +35,7 @@
             <li><a href="#services" data-after="Service">Services</a></li>
             <li><a href="#projects" data-after="Projects">Projects</a></li>
             <li><a href="#about" data-after="About">About</a></li>
-            <li><a href="logout.html" data-after="Logout">Logout</a></li>
+            <li><a href="logout.php" data-after="Logout">Logout</a></li>
           </ul>
         </div>
       </div>
@@ -50,6 +57,7 @@
   </section>
   <!-- End Hero Section  -->
 
+   <!-- Projects Section -->
   <section id="services">
     <div class="services container">
       <div class="service-top">
@@ -80,9 +88,9 @@
       </div>
     </div>
 
-    <a href="checkout.html" class="cta">Checkout</a>
+    <a href="checkout.php" class="cta">Checkout</a>
   </section>
-  
+   <!-- End Projects Section -->
 
   <!-- Projects Section -->
   <body class="other-pages">
@@ -176,7 +184,7 @@
           Expedita sint ad dolore, commodi labore nihil velit earum ducimus nulla quae nostrum fugit aut, deserunt
           reprehenderit libero enim!</p>
         <a href="..\File\resume.pdf" class="cta" download="resume.pdf" target="_blank">Download Resume</a>
-        <a href="contact.html" class="cta">Contact Me</a>
+        <a href="contact.php" class="cta">Contact Me</a>
       </div>
     </div>
   </section>

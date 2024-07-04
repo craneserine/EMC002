@@ -20,12 +20,12 @@
         </div>
         <div class="form-box">
             <div class="form signinform">
-                <form>
+                <form id="loginForm" method="post" action="loginfunction.php">
                     <h3>Sign In</h3>
-                    <input type="text" placeholder="Username" autocomplete="off" required>
-                    <input type="password" placeholder="Password" autocomplete="off" required>
+                    <input type="text" name="username" placeholder="Username" autocomplete="off" required>
+                    <input type="password" name="password" placeholder="Password" autocomplete="off" required>
                     <input type="submit" name="submit" value="Sign In">
-                    <a href="#">Fogot password?</a>
+                    <a href="#">Forgot password?</a>
                 </form>
             </div>
             <div class="form signupform">

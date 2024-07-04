@@ -9,7 +9,7 @@
 <body>
   <script>
     alert("You have been logged out successfully.");
-    window.location.href = "login.html";
+    window.location.href = "login.php";
   </script>
 </body>
 </html> 

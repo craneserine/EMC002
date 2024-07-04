@@ -79,10 +79,10 @@ if(!isset($_SESSION["login"]))
         while ($row = $result->fetch_assoc()) {
           ?>
           <div class="service-item">
-            <img src="..\Images\img-2.jpg" alt="Image 1" class="service-image">
+            <p><?php echo $row["img"]; ?></p>
             <h2><?php echo $row["item_name"]; ?></h2>
             <p><?php echo $row["description"]; ?></p>
-            <p>Price: <?php echo $row["price"]; ?></p>
+            <p>Price: $<?php echo $row["price"]; ?></p>
             <button class="add-to-cart">Add to Cart</button>
           </div>
           <?php

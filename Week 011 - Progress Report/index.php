@@ -33,7 +33,7 @@ if(!isset($_SESSION["login"]))
           <ul>
             <li><a href="#hero" data-after="Home">Home</a></li>
             <li><a href="#services" data-after="Service">Services</a></li>
-            <li><a href="#projects" data-after="Projects">Projects</a></li>
+            <li><a href="profile.php" data-after="Profile">Profile</a></li>
             <li><a href="#about" data-after="About">About</a></li>
             <li><a href="logout.php" data-after="Logout">Logout</a></li>
           </ul>
@@ -51,7 +51,7 @@ if(!isset($_SESSION["login"]))
         <h1>game developer <span></span></h1>
         <h1>& digital artist <span></span></h1>
         <h1>C R A N E S <span></span></h1>
-        <a href="#projects" type="button" class="cta">Portfolio</a>
+        <a href="#projects" type="button" class="cta">Artist Portfolio</a>
       </div>
     </div>
   </section>

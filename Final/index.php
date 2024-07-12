@@ -100,77 +100,154 @@ if(!isset($_SESSION["login"]))
 <!-- End Services Section -->
 
   <!-- Projects Section -->
-  <body class="other-pages">
-  <section id="projects">
-    <div class="projects container">
-      <div class="projects-header">
-        <h1 class="section-title">Cranes' <span>Portfolio</span></h1>
+<section id="projects">
+  <div class="projects container">
+    <div class="projects-header">
+      <h1 class="section-title">Cranes' <span>Portfolio</span></h1>
+    </div>
+    <div class="all-projects">
+      <div class="project-item">
+        <div class="project-info">
+          <h1>Project 1</h1>
+          <h2>Coding is Love</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
+            rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
+            harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+        </div>
+        <div class="project-img">
+          <img src="..\Images\img-1.jpg" alt="img-1" data-toggle="modal" data-target="#modal-1">
+          <!-- Modal -->
+          <div class="modal fade" id="modal-1" tabindex="-1" aria-labelledby="modal-1-label" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modal-1-label">Project 1</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img src="..\Images\img-1.jpg" alt="img-1" class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="all-projects">
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 1</h1>
-            <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
-          </div>
-          <div class="project-img">
-            <img src="..\Images\img-1.jpg" alt="img-1">
+      <div class="project-item">
+        <div class="project-info">
+          <h1>Project 2</h1>
+          <h2>Coding is Love</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
+            rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
+            harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+        </div>
+        <div class="project-img">
+          <img src="..\Images\img-2.jpg" alt="img-2" data-toggle="modal" data-target="#modal-2">
+          <!-- Modal -->
+          <div class="modal fade" id="modal-2" tabindex="-1" aria-labelledby="modal-2-label" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modal-2-label">Project 2</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img src="..\Images\img-2.jpg" alt="img-2" class="img-fluid">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 2</h1>
-            <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
-          </div>
-          <div class="project-img">
-            <img src="..\Images\img-2.jpg" alt="img-2">
+      </div>
+      <div class="project-item">
+        <div class="project-info">
+          <h1>Project 3</h1>
+          <h2>Coding is Love</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
+            rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
+            harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+        </div>
+        <div class="project-img">
+          <img src="..\Images\img-3.jpg" alt="img-3" data-toggle="modal" data-target="#modal-3">
+          <!-- Modal -->
+          <div class="modal fade" id="modal-3" tabindex="-1" aria-labelledby="modal-3-label" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modal-3-label">Project 3</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="
+                                      <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="..\Images\img-3.jpg" alt="img-3" class="img-fluid">
+              </div>
+            </div>
           </div>
         </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 3</h1>
-            <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
-          </div>
-          <div class="project-img">
-            <img src="..\Images\img-3.jpg" alt="img">
+      </div>
+      <div class="project-item">
+        <div class="project-info">
+          <h1>Project 4</h1>
+          <h2>Coding is Love</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
+            rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
+            harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+        </div>
+        <div class="project-img">
+          <img src="..\Images\img-4.jpg" alt="img-4" data-toggle="modal" data-target="#modal-4">
+          <!-- Modal -->
+          <div class="modal fade" id="modal-4" tabindex="-1" aria-labelledby="modal-4-label" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modal-4-label">Project 4</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img src="..\Images\img-4.jpg" alt="img-4" class="img-fluid">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 4</h1>
-            <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
-          </div>
-          <div class="project-img">
-            <img src="..\Images\img-4.jpg" alt="img-4">
-          </div>
+      </div>
+      <div class="project-item">
+        <div class="project-info">
+          <h1>Project 5</h1>
+          <h2>Coding is Love</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
+            rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
+            harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
         </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Project 5</h1>
-            <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
-          </div>
-          <div class="project-img">
-            <img src="..\Images\img-5.jpg" alt="img-5">
+        <div class="project-img">
+          <img src="..\Images\img-5.jpg" alt="img-5" data-toggle="modal" data-target="#modal-5">
+          <!-- Modal -->
+          <div class="modal fade" id="modal-5" tabindex="-1" aria-labelledby="modal-5-label" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modal-5-label">Project 5</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img src="..\Images\img-5.jpg" alt="img-5" class="img-fluid">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  </body>
   <!-- End Projects Section -->
 
   <!-- About Section -->

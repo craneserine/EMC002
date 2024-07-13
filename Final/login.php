@@ -12,6 +12,7 @@ session_start();
 </head>
 <body>
     <div class="container">
+        <div class="background-image"></div>
         <div class="orangeBG">
             <div class="box signin">
                 <h2>Already have an account?</h2>
@@ -29,7 +30,7 @@ session_start();
                     <input type="text" name="username" placeholder="Username" autocomplete="off" required>
                     <input type="password" name="password" placeholder="Password" autocomplete="off" required>
                     <input type="submit" name="submit" value="Sign In">
-                    <a href="#">Forgot password?</a>
+                    <!-- <a href="#">Forgot password?</a> -->
                 </form>
             </div>
             <div class="form signupform">

@@ -48,9 +48,9 @@ if(!isset($_SESSION["login"]))
   <section id="hero">
     <div class="hero container">
       <div>
-        <h1>game developer <span></span></h1>
-        <h1>& digital artist <span></span></h1>
-        <h1>C R A N E S <span></span></h1>
+        <h1>game developer<span></span></h1>
+        <h1>and digital artist <span></span></h1>
+        <h1 style="font-size:6.8vw" ><b>C R A N E S</b> <span></span></h1>
         <a href="#projects" type="button" class="cta">Artist Portfolio</a>
       </div>
     </div>
@@ -82,7 +82,7 @@ if(!isset($_SESSION["login"]))
             <?php echo '<img src="'.$row["img"]. '" />'?>
             <h2><?php echo $row["item_name"];?></h2>
             <p><?php echo $row["description"];?></p>
-            <p style="font-size:2em">Price: $<?php echo $row["price"];?></p>
+            <p style="font-size:2em">Price: $<?php echo $row["price"];?></p><br>
             <a href="add_to_cart.php?id=<?php echo $row["item_id"]; ?>" class="cta">Add to Cart</a>
           </div>
           <?php

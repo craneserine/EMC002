@@ -12,6 +12,8 @@ body{
     min-height: 100vh;
     background: burlywood;
     transition: .5s;
+    background-size: cover;
+    background-position: center;
 }
 
 body.active{
@@ -152,4 +154,3 @@ a{
     color: #333;
     font-size: 14px;
 }
-

@@ -18,7 +18,6 @@ if (!$con) {
     die("Connection failed: ". mysqli_connect_error());
 }
 
-
 // Check if the user ID exists in the users table
 $user_sql = "SELECT * FROM users WHERE user_id = '".$_SESSION["user_id"]."'";
 $user_result = $con->query($user_sql);
@@ -33,19 +32,12 @@ if ($user_result->num_rows > 0) {
         $sql = "INSERT INTO checkout (item_id, user_id) VALUES ('$item_id', '".$_SESSION["user_id"]."')";
         $result = $con->query($sql);
 
-        // Debug: Check if the query was successful
-        var_dump($result);
-
         if (!$result) {
             die("Query failed: ". $con->error);
         }
 
         // Close the database connection
         $con->close();
-
-        // Stay on the current page
-        header("Location: ".$_SERVER["HTTP_REFERER"]);
-        exit();
     } else {
         echo "Error: Item ID $item_id does not exist in the product table";
         exit();

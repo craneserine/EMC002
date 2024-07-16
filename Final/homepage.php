@@ -178,7 +178,7 @@ if(!isset($_SESSION["login"]))
     <div class="about container">
       <div class="col-left">
         <div class="about-img"> 
-          <img src="..\Images\img-8.jpg" alt="img">
+          <img src="..\Images\about_img.png" alt="img">
         </div>
       </div>
       <div class="col-right">

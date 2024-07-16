@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+if (isset($_GET['logout']) && $_GET['logout'] == 'success') {
+    echo '<script>alert("You have successfully logged out!");</script>';
+}
 ?>
 
 <!DOCTYPE html>

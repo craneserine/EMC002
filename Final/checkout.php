@@ -18,6 +18,7 @@ $total_price = 0; // Initialize total price variable
 
 if ($result->num_rows > 0) {
    ?>
+    <!-- Display checkout table -->
     <html>
       <head>
         <title>Checkout</title>

@@ -1,15 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Logout</title>
-  <link rel="stylesheet" href="style\style.css">
-</head>
-<body>
-  <script>
-    alert("You have been logged out successfully.");
-    window.location.href = "login.php";
-  </script>
-</body>
-</html> 
+<?php
+session_start();
+
+// Connect to the database
+$con = mysqli_connect("localhost", "root", "", "birdcage");
+
+// Check connection
+if (!$con) {
+    die("Connection failed: ". mysqli_connect_error());
+}
+
+// Delete all records from the checkout table for the current user
+$sql = "DELETE FROM checkout WHERE user_id = '".$_SESSION["user_id"]."'";
+$result = $con->query($sql);
+
+// Close the database connection
+$con->close();
+
+// Destroy the session
+session_destroy();
+
+// Redirect to the login page with a success message
+header("Location: index.php?logout=success");
+exit();
+?>

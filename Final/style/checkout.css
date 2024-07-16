@@ -1,19 +1,20 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #F5F5DC; /* Beige background color */
 }
 .container {
     max-width: 600px;
     margin: 40px auto;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #6a5c53;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .item {
     margin-bottom: 20px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #ccc;
-}
+    border-bottom: 1px solid #6a5c53;
+} 
 .item:last-child {
     border-bottom: none;
 }
@@ -26,15 +27,15 @@ body {
     padding-left: 20px; /* Add padding to the price column */
 }
 .payment-button {
-    background-color: #4CAF50;
-    color: #fff;
+    background-color: #dd5817;
+    color: #6a5c53;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 .payment-button:hover {
-    background-color: #3e8e41;
+    background-color: #c95114;
 }
 h1 {
     text-align: center;

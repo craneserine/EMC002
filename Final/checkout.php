@@ -53,7 +53,7 @@ if ($result->num_rows > 0) {
           <a href="payment.php" class="payment-button">Proceed to Payment</a>
           <div style="text-align: right; margin-top: 20px;">
             <p>Not done browsing?</p>
-            <a href="index.php #services" class="back-button">Back to Home</a>
+            <a href="homepage.php #services" class="back-button">Back to Home</a>
           </div>
         </div>
       </body>
@@ -62,7 +62,7 @@ if ($result->num_rows > 0) {
 } else {
     echo "No items in cart.";
    ?>
-    <a href="index.php #services" class="back-button">Back to Home</a>
+    <a href="homepage.php #services" class="back-button">Back to Home</a>
     <?php
 }
 

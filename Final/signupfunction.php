@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signup'])) {
 
     // Execute the query
     if ($mysqli->query($sql) === TRUE) {
-        echo '<script>window.location.replace("index.php");</script>';
+        echo '<script>window.location.replace("homepage.php");</script>';
     } else {
         echo "Error: ". $sql. "<br>". $mysqli->error;
     }

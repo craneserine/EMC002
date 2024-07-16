@@ -17,8 +17,8 @@ if (!$result) {
     die("Error purging cart: ". $con->error);
 }
 
-// Display success message as a popup alert box and redirect to index.php
-echo "<script>alert('Order confirmed! Your cart has been emptied.'); window.location.href='index.php';</script>";
+// Display success message as a popup alert box and redirect to homepage.php
+echo "<script>alert('Order confirmed! Your cart has been emptied.'); window.location.href='homepage.php';</script>";
 
 // Close the database connection
 $con->close();

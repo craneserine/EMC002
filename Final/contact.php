@@ -21,9 +21,9 @@
             <div class="bar"></div>
           </div>
           <ul>
-            <li><a href="index.php" data-after="Home">Home</a></li>
-            <li><a href="index.php #services" data-after="Service">Services</a></li>
-            <li><a href="index.php #about" data-after="About">About</a></li>
+            <li><a href="homepage.php" data-after="Home">Home</a></li>
+            <li><a href="homepage.php #services" data-after="Service">Services</a></li>
+            <li><a href="homepage.php #about" data-after="About">About</a></li>
             <li><a href="profile.php" data-after="Profile">Profile</a></li>
             <li><a href="logout.php" data-after="Logout">Logout</a></li>
           </ul>

@@ -30,7 +30,7 @@ if (isset($_POST["submit"])) {
             // Login successful, store the user ID in the session
             $_SESSION["login"] = 1;
             $_SESSION["user_id"] = $user_data["user_id"];
-            header("Location: index.php");
+            header("Location: homepage.php");
             exit();
         } else {
             echo "Error: Invalid username or password";

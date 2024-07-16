@@ -202,8 +202,10 @@ p {
 /* Hero Section */
 #hero {
 	background-image: url(background.gif);
-	background-size: cover;
-	background-position: top center;
+	background-size: 180vh 120vh;
+	background-color: #877f6b;
+	background-repeat: no-repeat;
+	background-position: top right;
 	position: relative;
 	z-index: 1;
   }
@@ -214,8 +216,8 @@ p {
 	left: 0;
 	top: 0;
 	height: 100%;
-	width: 100%;
-	background-color: rgb(49, 47, 47);
+	width: 121%;
+	background-color: rgb(43, 39, 39);
 	opacity: 0.7;
 	z-index: -1;
 }

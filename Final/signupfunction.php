@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signup'])) {
 
     // Check if the passwords match
     if ($password!= $confirmPassword) {
-        echo '<script>alert("Passwords do not match."); window.location.replace("login.php");</script>';
+        echo '<script>alert("Passwords do not match."); window.location.replace("index.php");</script>';
         exit;
     }
 
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signup'])) {
     $result = $mysqli->query($sql);
 
     if ($result->num_rows > 0) {
-        echo '<script>alert("Email or username already exists in the database."); window.location.replace("login.php");</script>';
+        echo '<script>alert("Email or username already exists in the database."); window.location.replace("index.php");</script>';
         exit;
     }
 

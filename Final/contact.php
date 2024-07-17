@@ -53,7 +53,7 @@
           <label for="message">Message:</label>
           <textarea id="message" name="message" required rows="10" cols="500"></textarea>
         </div>
-        <button class="cta" type="submit">Send Message</button>
+        <button class="cta" type="submit" onclick="sendMessageAlert(event)">Send Message</button>
       </form>
       <div class="social-links">
   <a href="https://www.facebook.com" target="_blank" class="social-btn">
@@ -74,6 +74,16 @@
     </div>
   </section>
 </div>
+
+<script>
+  function sendMessageAlert(event) {
+    event.preventDefault(); // prevent the form from submitting
+    alert("Message sent successfully!");
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+  }
+</script>
 
 </body>
 </html>

@@ -1,6 +1,8 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #F5F5DC; /* Beige background color */
+    font-family: 'Montserrat', sans-serif;
+    background-color: #877f6b;
 }
 .container {
     max-width: 600px;
@@ -9,6 +11,7 @@ body {
     border: 1px solid #6a5c53;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgb(207, 207, 194); /* White background color for the container */
 }
 .item {
     margin-bottom: 20px;
@@ -28,17 +31,21 @@ body {
 }
 .payment-button {
     background-color: #dd5817;
-    color: #6a5c53;
+    color: rgb(207, 207, 194);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    display: flex; /* Add this to make the button a flex container */
+    justify-content: center; /* Add this to center the button horizontally */
+    margin: 20px auto; /* Add this to add some margin around the button */
 }
 .payment-button:hover {
     background-color: #c95114;
 }
 h1 {
     text-align: center;
+    color: #fff;
 }
 table {
     width: 100%;

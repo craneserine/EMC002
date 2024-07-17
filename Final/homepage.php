@@ -62,7 +62,7 @@ if(!isset($_SESSION["login"]))
   <div class="services container">
     <div class="service-top">
       <h1 class="section-title">COMM<span>I</span>SSIONS</h1>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+      <p>Choose from the type of drawings the artist offers to secure a slot. The artist will reach out to you via email for the specifics of your commission.</p>
     </div>
     <div class="service-bottom">
       <?php
@@ -109,61 +109,52 @@ if(!isset($_SESSION["login"]))
         <div class="project-item">
           <div class="project-info">
             <h1>Project 1</h1>
-            <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+            <h2>Tale of Two Brothers</h2>
+            <p>The dread-inspiring twin vampires wield unparalleled dominion over the village they call home, their menacing presence instilling such deep-seated fear that the villagers are compelled to obey their every command.</p>
           </div>
           <div class="project-img">
-            <img src="..\Images\img-1.jpg" alt="img-1">
+            <img src="..\Images\project001.png" alt="img-1">
           </div>
         </div>
         <div class="project-item">
           <div class="project-info">
             <h1>Project 2</h1>
-            <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+            <h2>Lady Innamorata</h2>
+            <p>In the shadows of night, she prowls with an allure that bewitches and ensnares. Her charisma is a web, spun to entice and dominate. Men, drawn like moths to a flame, succumb to her seduction, unaware of the price: their souls, drained to extend her immortal life.</p>
           </div>
           <div class="project-img">
-            <img src="..\Images\img-2.jpg" alt="img-2">
+            <img src="..\Images\project002.png" alt="img-2">
           </div>
         </div>
         <div class="project-item">
           <div class="project-info">
             <h1>Project 3</h1>
-            <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+            <h2>Matthias Doyle</h2>
+            <p>He came  from  a  lineage  of  demonic  blades  ,  recognized  to  be  the  most  powerful  in  his  kin  since  he  can  easily  morph  into  any  weapon  his  user  desires  .  High  ranking  demons  in  the  fourth  circle  of  hell  wielded  him  with  pride  ,  always  being  rewarded  with  victory  .  despite  all  that  ,  he  was  never  taken  care  of  and  this  caused  him  to  nearly  break  .  after  the  said  incident  ,  he  refuses  to  be  wielded  again  .  he  roams  the  land  amongst  humans  ,  teaching  himself  how  to  morph  into  other  species  .
+            </p>
           </div>
           <div class="project-img">
-            <img src="..\Images\img-3.jpg" alt="img">
+            <img src="..\Images\project003.png" alt="img">
           </div>
         </div>
         <div class="project-item">
           <div class="project-info">
             <h1>Project 4</h1>
-            <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+            <h2>The Burning Cathedral</h2>
+            <p>This is a sketch. Driven mad by relentless devotion, the priest's fervor transformed into a consuming blaze of fanaticism. In a sacrificial frenzy, he set ablaze the sacred sanctuary he once worshipped in, offering its destruction as a twisted homage to his god.</p>
           </div>
           <div class="project-img">
-            <img src="..\Images\img-4.jpg" alt="img-4">
+            <img src="..\Images\project004.png" alt="img-4">
           </div>
         </div>
         <div class="project-item">
           <div class="project-info">
             <h1>Project 5</h1>
-            <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+            <h2>A Piece on Suffocation</h2>
+            <p>In the depths of her creative turmoil, the struggling artist's pencil traced lines of suffocating despair onto the canvas. Each stroke captured the weight of her emotions, weaving a haunting self-portrait where shadows coiled around her like relentless chains, symbolizing the suffocation she felt in her darkest moments. Through art, she found solace in expressing the unspoken depths of her inner struggle.</p>
           </div>
           <div class="project-img">
-            <img src="..\Images\img-5.jpg" alt="img-5">
+            <img src="..\Images\project005.png" alt="img-5">
           </div>
         </div>
       </div>
@@ -182,13 +173,10 @@ if(!isset($_SESSION["login"]))
         </div>
       </div>
       <div class="col-right">
-        <h1 class="section-title">About <span>me</span></h1>
-        <h2>Front End Developer</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, velit alias eius non illum beatae atque
-          repellat ratione qui veritatis repudiandae adipisci maiores. At inventore necessitatibus deserunt
-          exercitationem cumque earum omnis ipsum rem accusantium quis, quas quia, accusamus provident suscipit magni!
-          Expedita sint ad dolore, commodi labore nihil velit earum ducimus nulla quae nostrum fugit aut, deserunt
-          reprehenderit libero enim!</p>
+        <h1 class="section-title">The <span>Bird Cage</span></h1>
+        <h2>An Artist's Online Store</h2>
+        <p>The Birdhouse is an online store showcasing the artistic works of Cranes, an aspiring digital artist. Specializing in horror and fanart, the store features a curated selection of her original pieces alongside fanart. The store is also open to taking commissions.
+        </p>
         <a href="..\File\resume.pdf" class="cta" download="resume.pdf" target="_blank">Download Resume</a>
         <a href="contact.php" class="cta">Contact Me</a>
       </div>

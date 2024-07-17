@@ -38,6 +38,10 @@ if ($user_result->num_rows > 0) {
 
         // Close the database connection
         $con->close();
+
+        // Redirect to checkout page
+        header("Location: checkout.php");
+        exit();
     } else {
         echo "Error: Item ID $item_id does not exist in the product table";
         exit();

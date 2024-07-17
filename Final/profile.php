@@ -61,20 +61,21 @@ $con->close();
     <title>Profile</title>
     <link rel="stylesheet" href="style\style.css">
     <style>
+      @import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #877f6b;
         }
       .profile-container {
             max-width: 500px;
             margin: 40px auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: rgb(207, 207, 194);
             border: 1px solid #ddd;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
       .profile-header {
-            background-color: #333;
+            background-color: #265564;
             color: #fff;
             padding: 10px;
             text-align: center;
@@ -96,7 +97,7 @@ $con->close();
             border: 1px solid #ccc;
         }
       .profile-form input[type="submit"] {
-            background-color: #333;
+            background-color: #dd5817;
             color: #fff;
             padding: 10px 20px;
             border: none;

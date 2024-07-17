@@ -17,21 +17,22 @@ $result = $con->query($sql);
 $total_price = 0; // Initialize total price variable
 
 if ($result->num_rows > 0) {
-   ?>
+  ?>
     <!-- Display checkout table -->
     <html>
       <head>
-        <title>Checkout</title>
+        <title>CHECKOUT</title>
         <link rel="stylesheet" href="style\checkout.css">
       </head>
       <body>
         <h1>&nbsp;</h1> <!-- added a blank h1 tag to add space -->
-        <h1>Checkout</h1>
+        <h1>CHECKOUT</h1>
         <div class="container">
           <table>
             <tr>
               <th>Item Name</th>
               <th>Price</th>
+              <th>  </th>
             </tr>
             <?php
             while ($row = $result->fetch_assoc()) {
@@ -41,14 +42,17 @@ if ($result->num_rows > 0) {
                 $product_row = $product_result->fetch_assoc();
                 $price = $product_row["price"]; // Get the price of the item
                 $total_price += $price; // Add the price to the total
-               ?>
+              ?>
                 <tr>
                   <td><?php echo $product_row["item_name"];?></td>
                   <td>$<?php echo $price;?></td>
+                  <td>
+                    <a href="delete_item.php?item_id=<?php echo $item_id;?>&user_id=<?php echo $user_id;?>" class="delete-button">X</a>
+                  </td>
                 </tr>
                 <?php
             }
-           ?>
+          ?>
           </table>
           <p>Total: $<?php echo number_format($total_price, 2);?></p>
           <a href="payment.php" class="payment-button">Proceed to Payment</a>
@@ -62,7 +66,7 @@ if ($result->num_rows > 0) {
     <?php
 } else {
     echo "No items in cart.";
-   ?>
+  ?>
     <a href="homepage.php #services" class="back-button">Back to Home</a>
     <?php
 }

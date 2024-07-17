@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signup'])) {
     $confirmPassword = $_POST['confirmPassword'];
 
     // Check if the passwords match
-    if ($password!= $confirmPassword) {
+    if ($password != $confirmPassword) {
         echo '<script>alert("Passwords do not match."); window.location.replace("index.php");</script>';
         exit;
     }
@@ -59,7 +59,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signup'])) {
 
     // Execute the query
     if ($mysqli->query($sql) === TRUE) {
-        echo '<script>window.location.replace("homepage.php");</script>';
+        header("Location: homepage.php"); // Redirect to homepage.php using PHP header()
+        exit;
     } else {
         echo "Error: ". $sql. "<br>". $mysqli->error;
     }
